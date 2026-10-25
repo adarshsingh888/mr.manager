@@ -1,0 +1,27 @@
+name: mr_manager
+description: "Mr. Manager - Gov Job Eligibility Matcher, Real-Time Alerts & Exam Calendar Tracker"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  provider: ^6.1.2
+  table_calendar: ^3.1.2
+  flutter_local_notifications: ^17.2.1
+  intl: ^0.19.0
+  shared_preferences: ^2.2.3
+  url_launcher: ^6.3.0
+  http: ^1.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
