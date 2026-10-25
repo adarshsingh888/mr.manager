@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Java JDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
           java-version: '17'
@@ -26,11 +26,14 @@ jobs:
           channel: 'stable'
           cache: true
 
+      - name: Generate Android Scaffolding
+        run: flutter create --platforms=android --org com.mrmanager .
+
       - name: Get Dependencies
         run: flutter pub get
 
       - name: Build Android Release APK
-        run: flutter build apk --release
+        run: flutter build apk --release --no-tree-shake-icons
 
       - name: Upload APK for Direct Download
         uses: actions/upload-artifact@v4
